@@ -1,15 +1,15 @@
 #include <iostream>
-#include <vector>
+#include <list>
 using namespace std;
 
-vector<string>::const_iterator longest(const vector<string>& v) {
-    if (v.empty()) return v.end();
+list<string>::const_iterator longest(const list<string>& L) {
+    if (L.empty()) return L.end();
     
-    vector<string>::const_iterator it = v.begin();
-    vector<string>::const_iterator final;
+    list<string>::const_iterator it = L.begin();
+    list<string>::const_iterator final;
     string larg = "";
-    while (it != v.end()) {
-        if (it == v.begin()) {
+    while (it != L.end()) {
+        if (it == L.begin()) {
             larg = *it;
             final = it;
         } else {
